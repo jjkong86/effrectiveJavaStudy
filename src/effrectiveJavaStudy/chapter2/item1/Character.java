@@ -22,7 +22,10 @@ class Character {
     }
     
     public static void main(String[] args) {
-		Character warrior = Character.newWarrior();
-		Character mage = Character.newMage();
+    	Character mage = new Character(15, 5, 10, 15);
+    	Character mage1 = Character.newMage();
+    	
+    	Character warrior = new Character(5, 15, 20, 3);
+		Character warrior1 = Character.newWarrior();
 	}
 }
