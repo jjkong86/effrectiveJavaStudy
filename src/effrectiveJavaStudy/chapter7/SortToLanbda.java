@@ -38,6 +38,9 @@ public class SortToLanbda {
 	}
 	
 	public static void main(String[] args) {
-		
+		Map<String, Integer> map = new HashMap<>();
+		map.put("1", 2);
+		map.merge("1", 1, (count, incr) -> count + incr);
+		System.out.println(map.toString());
 	}
 }
