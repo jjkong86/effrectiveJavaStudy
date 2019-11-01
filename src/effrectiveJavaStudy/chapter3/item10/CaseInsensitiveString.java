@@ -32,6 +32,7 @@ public final class CaseInsensitiveString {
 	
 	public static class TestClass {
 		
+		@SuppressWarnings("unlikely-arg-type")
 		@Test
 		public void equalsTest() {
 			CaseInsensitiveString cis = new CaseInsensitiveString("Polish");
