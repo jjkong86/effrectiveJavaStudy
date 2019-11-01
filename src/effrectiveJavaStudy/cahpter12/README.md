@@ -17,6 +17,3 @@
 * 자바 직렬화 대상 객체는 동일한 serialVersionUID 를 가지고 있어야 합니다.
 
 	private static final long serialVersionUID = 1L;
-
-* 자바 직렬화를 아시는 분은 위에서 기술한 예제에서 사용되는 자바 직렬화 대상의 Member 클래스가 serialVersionUID 상수가 없어서 의아하신 분도 계실 겁니다.
-* 사실 반드시 기술해야 되는 필수는 아니기 때문에 빼둔 것입니다. 하지만 상당히 중요한 부분이라서 따로 설명하려고 합니다. 이곳에서는 넘어가도록 하겠습니다.
