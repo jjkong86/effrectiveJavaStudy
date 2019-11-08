@@ -7,8 +7,9 @@ public class Member implements Serializable {
 	
 	private String name = "jj";
     private String email;
-    public transient String hp;
-//    String temp;
+//    public transient String hp;
+    String temp;
+    String str;
     
     public Member() {}
     
@@ -21,6 +22,6 @@ public class Member implements Serializable {
 
     @Override
     public String toString() {
-        return String.format("Member{name='%s', email='%s', hp='%s'}", name, email, hp);
+        return String.format("Member{name='%s', email='%s'}", name, email);
     }
 }
