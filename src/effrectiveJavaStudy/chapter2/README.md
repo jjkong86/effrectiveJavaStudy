@@ -1,8 +1,7 @@
 # Singleton
 
-### 싱글톤
-
-* 일반적으로 하나의 인스턴스만 존재해야 할 경우 Singleton 패턴을 사용하게 된다.
+* 싱클톤이란 인스턴스를 오직 하나만 생성할 수 있는 클래스를 말한다.
+* 전형적인 예로는 무상태(stateless) 객체나 설계상 유일해야 하는 시스템 컴포넌트이다.
 
 ### 일반적인 싱글톤 패턴
 
@@ -27,10 +26,8 @@
 * DCL은 현재 broken 이디엄이고 사용을 권고 하지 않는다.
 
 	public class SingleTonDCL {
-		private volatile static SingleTonDCL INSTANCE;
-	
-		private SingleTonDCL() {}
-	
+		private volatile static SingleTonDCL INSTANCE;	
+		private SingleTonDCL() {}	
 		public static SingleTonDCL getInstance() {
 			if (INSTANCE == null) {
 				synchronized (SingleTonDCL.class) {
@@ -58,16 +55,14 @@
 ### LazyHolder
 
 * 객체가 필요할 때로 초기화를 미루는 기법이다.
-* LazyHolder는 LazyHolder의 Instance 변수가 없기 때문에 클래스 로딩 시(Runtime 시점에서) LazyHolder를 초기화 하지 못한다.
+* Singleton은 LazyHolder의 Instance 변수가 없기 때문에 클래스 로딩 시(Runtime 시점에서) LazyHolder를 초기화 하지 못한다.
 * getInstance method를 참조하는 순간 LazyHolder가 로딩되고 초기화되고 thread-safe하다.
 
 	public class Singleton {
 		private Singleton() {}
-
 		public static Singleton getInstance() {
 			return LazyHolder.INSTANCE;
 		}
-
 		private static class LazyHolder {
 			private static final Singleton INSTANCE = new Singleton();
 		}
