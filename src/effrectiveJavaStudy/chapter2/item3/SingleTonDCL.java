@@ -7,11 +7,7 @@ public class SingleTonDCL {
 
 	public static SingleTonDCL getInstance() {
 		if (INSTANCE == null) {
-			synchronized (SingleTonDCL.class) {
-				if (INSTANCE == null) {
-					INSTANCE = new SingleTonDCL();
-				}
-			}
+			INSTANCE = new SingleTonDCL();
 		}
 		return INSTANCE;
 	}
